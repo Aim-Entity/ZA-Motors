@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% block head %}
+  <title>ADD A BLOCK</title>
+  {% endblock %}
+
+  <link rel="stylesheet" href="{% static 'base.css' %}">
+  <link rel="shortcut icon" type="image/jpg" href="{% static 'base_imgs/logo.svg' %}"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="base-container">
+    <nav>
+      <div class="navigation">
+        <img src="{% static 'base_imgs/logo.svg' %}" alt="Logo" class="logo">
+
+        <ul>
+          <a href="{% url 'index' %}"><li class="home">Home</li></a>
+          <a href="#"><li class="fleet">Stocklist</li></a>
+          <a href="#"><li class="contact">Contact</li></a>
+        </ul>
+      </div>
+
+      <div class="nav-dropdown">
+        <div>
+          <a href="{% url 'index' %}"><li class="home">Home</li></a>
+          <a href="#"><li class="fleet">Stocklist</li></a>
+          <a href="#"><li class="contact">Contact</li></a>
+        </div>
+      </div>
+
+      <div class="phone-navigation">
+        <img src="{% static 'base_imgs/logo.svg' %}" alt="Logo" class="logo">
+
+        <img src="{% static 'base_imgs/hamburger.svg' %}" alt="Hamburger" class="hamburger">
+      </div>
+    </nav>
+
+
+  </div>
+
+  <script src="{% static 'home/base.js' %}"></script>
+
+  {% block content %}
+    ADD A CONTENT BLOCK
+  {% endblock %}
+
+  <div class="base-container">
+    <footer>
+      <div class="left-footer">
+        <h3 class="copy">© Chauffline, all rights reserved</h3>
+
+        <div class="credits">
+          <h3 class="designer">Designed & Developed By Bilal Uddin. Visit www.bilaluddin.me</h3>
+        </div>
+      </div>
+
+      <div class="right-footer">
+        <h3 class="email">Copyright: ZA Motors 2021</h3>
+        <h3 class="email">Address</h3>
+        <h3 class="phone-footer">Phone: 07967 509040</h3>
+
+        <div class="socials">
+          <a href="https://www.facebook.com/chauffline" target="_blank"><img src="{% static 'base_imgs/facebook.svg' %}" alt="FB" class="facebook"></a>
+          <a href="https://twitter.com/iCHAUFFLINE" target="_blank"><img src="{% static 'base_imgs/twitter.svg' %}" alt="twitter" class="twitter"></a>
+          <a href="https://www.instagram.com/chauffline/" target="_blank"><img src="{% static 'base_imgs/instagram.svg' %}" alt="instagram" class="instagram"></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

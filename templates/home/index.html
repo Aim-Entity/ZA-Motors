@@ -1,0 +1,229 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% block head %}
+  <title>Home</title>
+  <link rel="stylesheet" href="{% static 'home/style.css' %}">
+  {% endblock %}
+</head>
+<body>
+  {% block content %}
+    <div class="container">
+      <div class="s1">
+        <img src="{% static 'home/imgs/hero.png' %}" alt="Hero" class="hero-img">
+
+        <img src="{% static 'home/imgs/title.svg' %}" alt="Title" class="hero-title">
+        <h2 class="s1-title">CHAUFFLINE</h2>
+        <h3 class="hero-sub-title">REDEFINING LUXURY TRAVEL</h3>
+
+        <div class="btn-group">
+          <a href=""><button class="btn fleet-btn">Our Fleet</button></a>
+          <a href="tel:07593331949"><button class="btn call-btn">Call Now</button></a>
+        </div>
+      </div>
+
+      <div class="s2">
+        <div class="s2-title">Popular Cars</div>
+
+        <div class="card-group">
+          <!-- CARD 1 -->
+          <div class="card">
+            <img src="{{ car.car.thumbnail.url }}" alt="Thumbnail" class="card-thumbnail">
+
+            <hr class="card-line">
+
+            <h2 class="card-category">{{ car.car.category }}</h2>
+
+            <p class="card-perk1">{{ car.car.quality_one }}</p>
+            <p class="card-perk2">{{ car.car.quality_two }}</p>
+
+            <p class="card-car-name">{{ car.car.name }}</p>
+
+            <hr class="card-line">
+
+            <a href="#"><button class="card-btn btn">Find Out More</button></a>
+          </div>
+
+          <div class="card">
+            <img src="{{ car.car.thumbnail.url }}" alt="Thumbnail" class="card-thumbnail">
+
+            <hr class="card-line">
+
+            <h2 class="card-category">{{ car.car.category }}</h2>
+
+            <p class="card-perk1">{{ car.car.quality_one }}</p>
+            <p class="card-perk2">{{ car.car.quality_two }}</p>
+
+            <p class="card-car-name">{{ car.car.name }}</p>
+
+            <hr class="card-line">
+
+            <a href="#"><button class="card-btn btn">Find Out More</button></a>
+          </div>
+
+          <div class="card">
+            <img src="{{ car.car.thumbnail.url }}" alt="Thumbnail" class="card-thumbnail">
+
+            <hr class="card-line">
+
+            <h2 class="card-category">{{ car.car.category }}</h2>
+
+            <p class="card-perk1">{{ car.car.quality_one }}</p>
+            <p class="card-perk2">{{ car.car.quality_two }}</p>
+
+            <p class="card-car-name">{{ car.car.name }}</p>
+
+            <hr class="card-line">
+
+            <a href="#"><button class="card-btn btn">Find Out More</button></a>
+          </div>
+        </div>
+        <a href=""><button class="s2-btn btn">Find More Cars</button></a>
+      </div>
+
+      <div class="s3">
+        <img src="{% static 'home/imgs/service.png' %}" alt="Service" class="s3-img">
+
+        <div class="s3-content">
+          <h3 class="s3-title">Our Services</h3>
+
+          <p class="s3-par1 s3-par">We offer high-end luxury cars for whatever your occasion. We take total care of your needs and requirements for the entire journey</p>
+
+          <p class="s3-par2 s3-par">Serving all over the UK. Based in  Southampton and Hampshire</p>
+        </div>
+      </div>
+
+      <div class="s4">
+        <div class="services">
+          <!-- TOP MC -->
+          <div class="mc">
+            <div class="mc-top">
+              <img src="{% static 'home/imgs/airplane.svg' %}" alt="Airplane" class="mc-img">
+              <p class="mc-title">Airport Transfers</p>
+            </div>
+
+            <p class="mc-text">Our service is optimised to make your transfer to airports easy as possible with our flight tracking system avoiding additional wait times and flight delays.</p>
+          </div>
+
+          <div class="mc">
+            <div class="mc-top">
+              <img src="{% static 'home/imgs/party.svg' %}" alt="Airplane" class="mc-img">
+              <p class="mc-title">Parties</p>
+            </div>
+
+            <p class="mc-text">Want to arrive to your parties in style and impress the crowd. We have a range of luxury cars to meet your needs.</p>
+          </div>
+
+          <div class="mc">
+            <div class="mc-top">
+              <img src="{% static 'home/imgs/briefcase.svg' %}" alt="Airplane" class="mc-img">
+              <p class="mc-title">Business Travel</p>
+            </div>
+
+            <p class="mc-text">Stress-free professional chauffering service making your business travel smarter, simpler and faster</p>
+          </div>
+
+          <!-- Bottom MC -->
+
+          <div class="mc">
+            <div class="mc-top">
+              <img src="{% static 'home/imgs/wedding.svg' %}" alt="Airplane" class="mc-img">
+              <p class="mc-title">Weddings</p>
+            </div>
+
+            <p class="mc-text">Everyone wants their wedding day to be perfect. Let us make your special day one to remember</p>
+          </div>
+
+          <div class="mc">
+            <div class="mc-top">
+              <img src="{% static 'home/imgs/sports.svg' %}" alt="Airplane" class="mc-img">
+              <p class="mc-title">Sport Events</p>
+            </div>
+
+            <p class="mc-text">Make us the first choice for you days out at the races or other sporting events.</p>
+          </div>
+
+          <div class="mc">
+            <div class="mc-top">
+              <img src="{% static 'home/imgs/city.svg' %}" alt="Airplane" class="mc-img">
+              <p class="mc-title">City Transfers</p>
+            </div>
+
+            <p class="mc-text">Enjoy peace of mind when you book a ride with our VIP chauffering service</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="s5">
+        <div class="s5-title">Why Us?</div>
+  
+        <div class="advantages">
+          <div class="business-age adv-div">
+            <img src="{% static 'home/imgs/age.svg' %}" alt="Age" class="age-icon">
+  
+            <p class="age-text">A trusted service providing top class service in the UK for the past 25 years</p>
+          </div>
+  
+          <div class="business-saftey adv-div">
+            <img src="{% static 'home/imgs/saftey.svg' %}" alt="saftey" class="saftey-icon">
+  
+            <p class="age-text">All our chauffeurs are fully qualified and vetted. We guarantee a safe, reliable and professional ride</p>
+          </div>
+  
+          <div class="business-driver adv-div">
+            <img src="{% static 'home/imgs/drivers.svg' %}" alt="driver" class="driver-icon">
+  
+            <p class="age-text">Lets us deal with all the hassle making your journey seemless and stress-free.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="s6">
+        <h2 class="s6-title">Testimonials</h2>
+
+        <div class="card-group">
+          <div class="t-card">
+            <p class="card-quote">“{{ testimonial.message }}”</p>
+
+            <h3 class="card-name">
+              - {{ testimonial.name }}
+            </h3>
+          </div>
+        </div>
+        <a href=""><button class="s2-btn btn">Visit Our Fleet</button></a>
+      </div>
+
+      <div class="s7">
+        <h2 class="s7-title">How To Book A Car</h2>
+        <p class="s7-text">If you’re interested in hiring a car, then simply contact us
+          below by clicking the button or giving us a phone call.
+          If you have an enquiry send us an email or use
+          our online contact form.</p>
+
+        <a href=""><button class="contact-btn btn">Contact Us</button></a>
+      </div>
+    </div>
+
+    <style>
+      .contact-btn{
+        cursor: pointer;
+      }
+
+      /* BASE MODIFIED */
+      /* .navigation {
+        width: 100%;
+        height: 100px;
+        background: rgba(46, 46, 46, 0.6);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      } */
+    </style>
+  {% endblock %}
+</body>
+</html>
