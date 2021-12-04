@@ -2,6 +2,61 @@
 
 .s1 {
   height: 100vh;
+  margin-top: 100px;
+}
+
+.s1-clear-bg {
+  width: 475px;
+  height: 424px;
+  margin-left: 50px;
+
+  background: rgba(51, 51, 51, 0.3);
+}
+
+.s1-title {
+  width: 517px;
+  margin-left: 21px;
+  padding-top: 80px;
+
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 119.68%;
+
+  color: #ffffff;
+
+  text-shadow: 7px 4px 4px rgba(0, 0, 0, 0.45);
+}
+
+.s1-text {
+  width: 405px;
+  margin-left: 21px;
+  margin-top: 25px;
+
+  font-size: 18px;
+  line-height: 143.18%;
+
+  letter-spacing: 0.015em;
+
+  color: #ffffff;
+}
+
+.s1-btn {
+  margin-top: 45px;
+  margin-left: 21px;
+
+  width: 230px;
+  height: 45px;
+
+  background: #d43333;
+
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
 }
 
 .hero-img {
@@ -14,70 +69,11 @@
   height: 100vh;
   object-fit: cover;
 }
-
-.s1-title {
-  display: none;
-}
-
-.hero-title {
-  margin-top: 30px;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.hero-sub-title {
-  font-size: 24px;
-  margin-top: 10px;
-
-  text-align: center;
-
-  color: #ffffff;
-}
-
-.btn-group {
-  width: 50%;
-  margin: 0 auto;
-  margin-top: 70px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.fleet-btn {
-  width: 220px;
-  height: 70px;
-  border: none;
-
-  background: #fdfdfd;
-  border-radius: 3px;
-
-  font-size: 24px;
-  line-height: 29px;
-
-  color: black;
-  cursor: pointer;
-}
-
-.call-btn {
-  width: 220px;
-  height: 70px;
-  background: none;
-
-  border: 2px solid #fdfdfd;
-  border-radius: 3px;
-
-  font-size: 24px;
-  line-height: 29px;
-
-  color: #ffffff;
-  cursor: pointer;
-}
-
 /* SECTION 2 */
 
 .s2-title {
-  width: 211px;
-  margin: 0 auto;
+  width: 100%;
+  text-align: center;
   font-weight: 600;
   font-size: 32px;
 
@@ -85,7 +81,7 @@
 }
 
 .card-group {
-  width: 78.125%;
+  width: 92%;
   margin: 0 auto;
   margin-top: 70px;
 
@@ -94,87 +90,57 @@
 }
 
 .card {
-  width: 300px;
-  height: 500px;
+  width: 365px;
+  height: 390px;
 
   background: #ffffff;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 5px;
 
   display: flex;
   flex-direction: column;
 }
 
 .card-thumbnail {
-  width: 250px;
-  height: 120px;
+  width: 100%;
+  height: 195px;
   align-self: center;
-  margin-top: 35px;
   object-fit: cover;
 }
 
-.card-line {
-  margin-top: 20px;
-  border: 1.5px solid #a5a5a5;
-  background-color: #a5a5a5;
-  width: 250px;
-  align-self: center;
-}
+.card-category,
+.card-attribute {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
 
-.card-category {
-  font-weight: 600;
-  font-size: 26px;
+  color: #333333;
 
-  letter-spacing: 0.14em;
-
-  color: #000000;
-  margin-top: 11px;
+  margin-top: 15px;
   margin-left: 25px;
-}
-
-.card-perk1,
-.card-perk2 {
-  font-size: 21px;
-
-  color: #3c3c3c;
-  margin-left: 25px;
-}
-
-.card-perk1 {
-  margin-top: 25px;
-}
-
-.card-perk2 {
-  margin-top: 14px;
 }
 
 .card-car-name {
-  margin-top: 30px;
-  font-size: 20px;
+  margin-top: 25px;
+  font-size: 22px;
   line-height: 24px;
 
-  color: #828282;
+  color: #333;
   margin-left: 25px;
 }
 
-.card-btn,
-.s2-btn {
-  width: 250px;
+.card-btn {
+  width: 100%;
   height: 45px;
 
   border: none;
-  background: #0b5c97;
-  border-radius: 5px;
+  background: #333;
 
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
 
   color: #ffffff;
-
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: 20px;
+  margin-top: 30px;
   cursor: pointer;
 }
 
