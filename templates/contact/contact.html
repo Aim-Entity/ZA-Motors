@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% block head %}
+  <title>Contact</title>
+  <link rel="stylesheet" href="{% static 'contact/style.css' %}">
+  {% endblock %}
+</head>
+<body>
+  {% block content %}
+    <div class="container">
+      <div class="s1">
+        <div class="s1-container">
+          <div class="s1-right">
+            <form method="POST"> {% csrf_token %}
+              {{ form }}
+
+              <button type="submit" class="submit">Submit</button>
+            </form>
+          </div>
+
+          <div class="s1-left">
+            <div class="s1-left-top">
+              <h2 class="s1-title">Send Us A Message</h2>
+
+              <p class="s1-text">
+                Fill In our form or give us a call to hire a car or 
+                for any enquiries. If we do not respond back by
+                the estimated response time, then please
+                re-send the form or call us again.
+              </p>
+            </div>
+
+            <div class="s1-left-bottom">
+              <!-- <div id="map"></div> -->
+
+              <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2352.285186651111!2d-1.8744574847503461!3d53.87335774280671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bef8aa5a56185%3A0x19c7cd3ee1dcc7ef!2s232%20Bradford%20Rd%2C%20Riddlesden%2C%20Keighley%20BD20%205JT!5e0!3m2!1sen!2suk!4v1638691843404!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let navigation = document.querySelector(".navigation")
+      navigation.style.opacity = 1
+
+      let map = document.querySelector(".map")
+
+      console.log(window.innerWidth)
+
+      if(window.innerWidth < 900) {
+        map.height = "225"
+        map.width = "300"
+      }
+    </script>
+    
+  {% endblock %}
+</body>
+</html>
