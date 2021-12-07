@@ -21,7 +21,7 @@
           <h2 class="s1-title">PURCHASE YOUR PERFECT CAR</h2>
           <p class="s1-text">Quality used car dealer with a wide range of cars to suit all budgets</p>
 
-          <a href=""><button class="s1-btn btn">View All Cars</button></a>
+          <a href="{% url 'stock' %}"><button class="s1-btn btn">View All Cars</button></a>
         </div>
       </div>
 
@@ -41,19 +41,19 @@
             <p class="card-attribute">{{ car.car.attribute }}</p>
             {% endif %}
 
-            <a href="#"><button class="card-btn btn">View Car</button></a>
+            <a href="{% url 'stock-detail' car.car.slug %}"><button class="card-btn btn">View Car</button></a>
           </div>
           {% endfor %}
         </div>
 
-        <div class="pagination">
+        <!-- <div class="pagination">
           <img src="{% static 'home/imgs/chev_left.svg' %}" alt="Chev" class="chev-left">
 
           <div class="circ-btn"></div>
           <div class="circ-btn circ-btn-deactive"></div>
 
           <img src="{% static 'home/imgs/chev_right.svg' %}" alt="Chev" class="chev-right">
-        </div>
+        </div> -->
       </div>
 
       <div class="s3">
@@ -108,7 +108,7 @@
               <h2 class="s5-title">We offer cars from dozens of well-known brands</h2>
               <p class="s5-text">At Z&A Motors, we are proud of the extensive range of quality used vehicles we are able to offer</p>
   
-              <a href="#"><button class="s5-btn">View Our Cars</button></a>
+              <a href="{% url 'stock' %}"><button class="s5-btn">View Our Cars</button></a>
             </div>
             
             <div class="lg-block"></div>
@@ -144,14 +144,14 @@
           </div>
           {% endfor %}
         </div>
-        <a href=""><button class="s6-btn btn">Visit Our Fleet</button></a>
+        <a href="{% url 'stock' %}"><button class="s6-btn btn">Check Stock</button></a>
       </div>
 
       <div class="s7">
         <h2 class="s7-title">Sell or part exchange your car</h2>
         <p class="s7-text">Quick, convenient and hassle-free, get a quick valuation of you car. If your interested please get in touch. </p>
 
-        <a href=""><button class="contact-btn btn">Contact Us</button></a>
+        <a href="{% url 'contact' %}"><button class="contact-btn btn">Contact Us</button></a>
       </div>
     </div>
 

@@ -1,0 +1,215 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% block head %}
+  <title>{{ object.brand }}</title>
+  <link rel="stylesheet" href="{% static 'stock/stock_detail.css' %}">
+  {% endblock %}
+</head>
+<body>
+  {% block content %}
+    <div class="container">
+
+      <div class="s1">
+        <div class="top-text">
+          <div class="main-title">
+            <h2 class="s1-title">{{ object.brand }}{{ object.model }}</h2>
+            <h2 class="s1-price">£{{ object.price }}</h2>
+          </div>
+
+          <h3 class="s1-attribute">{{ object.attribute }} ({{ object.year_of_car }})</h3>
+        </div>
+        <div class="gallery">
+          <img src="{{ object.img1.url }}" alt="Cover" class="cover active-cover">
+          {% if object.img2 %}
+          <img src="{{ object.img2.url }}" alt="Cover" class="cover">
+          {% endif %}
+
+          {% if object.img3 %}
+          <img src="{{ object.img3.url }}" alt="Cover" class="cover">
+          {% endif %}
+
+          {% if object.img4 %}
+          <img src="{{ object.img4.url }}" alt="Cover" class="cover">
+          {% endif %}
+
+          {% if object.img5 %}
+          <img src="{{ object.img5.url }}" alt="Cover" class="cover">
+          {% endif %}
+
+          {% if object.img6 %}
+          <img src="{{ object.img6.url }}" alt="Cover" class="cover">
+          {% endif %}
+
+          <div class="cover-options">
+            <img src="{{ object.img1.url }}" alt="Cover" class="cover-option">
+            {% if object.img2 %}
+            <img src="{{ object.img2.url }}" alt="Cover" class="cover-option">
+            {% endif %}
+            {% if object.img3 %}
+            <img src="{{ object.img3.url }}" alt="Cover" class="cover-option">
+            {% endif %}
+            {% if object.img4 %}
+            <img src="{{ object.img4.url }}" alt="Cover" class="cover-option">
+            {% endif %}
+            {% if object.img5 %}
+            <img src="{{ object.img5.url }}" alt="Cover" class="cover-option">
+            {% endif %}
+            {% if object.img6 %}
+            <img src="{{ object.img6.url }}" alt="Cover" class="cover-option">
+            {% endif %}
+          </div>
+        </div>
+
+        <a href="{% url 'contact' %}"><button class="contact-btn">Call Us</button></a>
+      </div>
+
+      <div class="s2">
+        <div class="s2-cont">
+          <h2 class="s2-title">key Facts</h2>
+          <hr class="s2-line">
+
+          <div class="facts">
+            <div class="fact">
+              <img src="{% static 'stock/imgs/car.svg' %}" alt="Car" class="fact-img">
+              <p class="fact-text">{{ object.car_type }}</p>
+            </div>
+
+            <div class="fact">
+              <img src="{% static 'stock/imgs/gear.svg' %}" alt="Gear" class="fact-img">
+              <p class="fact-text">{{ object.gear_type }}</p>
+            </div>
+
+            <div class="fact">
+              <img src="{% static 'stock/imgs/color.svg' %}" alt="Colour" class="fact-img">
+              <p class="fact-text">{{ object.colour }}</p>
+            </div>
+
+            <div class="fact">
+              <img src="{% static 'stock/imgs/petrol.svg' %}" alt="Petrol" class="fact-img">
+              <p class="fact-text">{{ object.petrol_type }}</p>
+            </div>
+
+            <div class="fact">
+              <img src="{% static 'stock/imgs/mile.svg' %}" alt="mile" class="fact-img">
+              <p class="fact-text">{{ object.mileage }}</p>
+            </div>
+
+            <div class="fact">
+              <img src="{% static 'stock/imgs/year.svg' %}" alt="year" class="fact-img">
+              <p class="fact-text">{{ object.year_of_car }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="s3">
+        <button class="description-tab active-tab">Description</button>
+        <button class="detail-tab">Detail</button>
+
+        <div class="s3-cont">
+          <div class="description-cont active-cont">
+            <p class="description">{{ object.description }}</p>
+          </div>
+
+          <div class="detail-cont">
+            <div class="columns">
+              <div class="left-column-detail">
+                <div class="detail-section">
+                  <div class="detail-text">
+                    <p class="attribute">Model Series</p>
+                    <p class="attribute-answer">{{ object.model_series }}</p>
+                  </div>
+                  <hr class="attribute-line">
+                </div>
+  
+                <div class="detail-section">
+                  <div class="detail-text">
+                    <p class="attribute">Gross Weight KG</p>
+                    <p class="attribute-answer">{{ object.gross_weight_kg }}</p>
+                  </div>
+                  <hr class="attribute-line">
+                </div>
+  
+                <div class="detail-section">
+                  <div class="detail-text">
+                    <p class="attribute">Acceleration (0-60 MPH)</p>
+                    <p class="attribute-answer">{{ object.acceleration_zeroToSixty }}</p>
+                  </div>
+                  <hr class="attribute-line">
+                </div>
+  
+                <div class="detail-section">
+                  <div class="detail-text">
+                    <p class="attribute">Fuel Consumption MPG</p>
+                    <p class="attribute-answer">{{ object.fuel_consumption_MPG }}</p>
+                  </div>
+                  <hr class="attribute-line">
+                </div>
+  
+                <div class="detail-section">
+                  <div class="detail-text">
+                    <p class="attribute">Foward Gears</p>
+                    <p class="attribute-answer">{{ object.foward_gears }}</p>
+                  </div>
+                  <hr class="attribute-line">
+                </div>
+              </div>
+
+              <div class="right-column-detail">
+                <div class="detail-section">
+                  <div class="detail-text">
+                    <p class="attribute">Max Power BHP</p>
+                    <p class="attribute-answer">{{ object.max_power_BHP }}</p>
+                  </div>
+                  <hr class="attribute-line">
+                </div>
+  
+                <div class="detail-section">
+                  <div class="detail-text">
+                    <p class="attribute">Max Speed MPH</p>
+                    <p class="attribute-answer">{{ object.max_speed_MPH }}</p>
+                  </div>
+                  <hr class="attribute-line">
+                </div>
+  
+                <div class="detail-section">
+                  <div class="detail-text">
+                    <p class="attribute">Number Of Cylinders</p>
+                    <p class="attribute-answer">{{ object.number_of_cylinders }}</p>
+                  </div>
+                  <hr class="attribute-line">
+                </div>
+  
+                <div class="detail-section">
+                  <div class="detail-text">
+                    <p class="attribute">Length (M)</p>
+                    <p class="attribute-answer">{{ object.length_metres }}</p>
+                  </div>
+                  <hr class="attribute-line">
+                </div>
+  
+                <div class="detail-section">
+                  <div class="detail-text">
+                    <p class="attribute">Height (M)</p>
+                    <p class="attribute-answer">{{ object.height_metres }}</p>
+                  </div>
+                  <hr class="attribute-line">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="{% static 'stock/stock_detail.js' %}"></script>
+  {% endblock %}
+</body>
+</html>

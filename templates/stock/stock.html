@@ -20,14 +20,14 @@
 
       <div class="button-list">
         <a href=""><button class="detail-btn">More Details</button></a>
-        <a href=""><button class="contact-btn">Contact Us</button></a>
+        <a href="{% url 'contact' %}"><button class="contact-btn">Contact Us</button></a>
       </div>
 
       <img src="{% static 'stock/imgs/hero_car.png' %}" alt="" class="hero-car">
     </div>
 
     <div class="s2">
-      <h2 class="s2-title">Which Vehicles Are You Looking For?</h2>
+      <h2 class="s2-title">Used cars in Burnley</h2>
 
       <div class="form-cont">
         <form method="GET"> {% csrf_token %}

@@ -19,7 +19,7 @@ class Car(models.Model):
     attribute = models.CharField(
         max_length=100, blank=True, null=True)
 
-    decription = models.TextField()
+    description = models.TextField(default="")
 
     price = models.IntegerField()
 
@@ -46,3 +46,13 @@ class Car(models.Model):
 
     def __str__(self):
         return f"{self.brand}, {self.model}"
+
+
+class PromotionalCar(models.Model):
+    car = models.ForeignKey(Car, on_delete=models.CASCADE,)
+
+    title = models.CharField(max_length=100)
+    poster = models.ImageField(upload_to="promotional")
+
+    def __str__(self):
+        return self.title

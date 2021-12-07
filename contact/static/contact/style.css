@@ -149,6 +149,20 @@ footer {
   margin-top: 210px;
 }
 
+.time {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.address {
+  font-size: 18px;
+  margin-top: 50px;
+}
+
+.s1-left-bottom {
+  margin-top: 15px;
+}
+
 @media screen and (max-width: 960px) {
   .s1 {
     margin-top: 100px;
@@ -214,5 +228,11 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .address {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
   }
 }
