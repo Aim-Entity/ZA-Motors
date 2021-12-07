@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import PopularCar, Testimonials
 
-# Register your models here.
+admin.site.register(PopularCar)
+admin.site.register(Testimonials)

@@ -30,40 +30,20 @@
 
         <div class="card-group">
           <!-- CARD 1 -->
+          {% for car in cars %}
           <div class="card">
-            <img src="{% static 'home/imgs/honda.png' %}" alt="Thumbnail" class="card-thumbnail">
+            <img src="{{ car.car.thumbnail.url }}" alt="Thumbnail" class="card-thumbnail">
 
-            <p class="card-car-name">Honda</p>
+            <p class="card-car-name">{{ car.car.brand }}</p>
 
-            <p class="card-category">CR-V (2006)</p>
-            <p class="card-attribute">2.2 I-CDTI SPORT</p>
+            <p class="card-category">{{ car.car.model }}</p>
+            {% if car.car.attribute %}
+            <p class="card-attribute">{{ car.car.attribute }}</p>
+            {% endif %}
 
             <a href="#"><button class="card-btn btn">View Car</button></a>
           </div>
-
-          <div class="card">
-            <img src="{% static 'home/imgs/honda.png' %}" alt="Thumbnail" class="card-thumbnail">
-
-            <p class="card-car-name">Honda</p>
-
-            <p class="card-category">CR-V (2006)</p>
-            <p class="card-attribute">2.2 I-CDTI SPORT</p>
-
-            <a href="#"><button class="card-btn btn">View Car</button></a>
-          </div>
-
-          <div class="card">
-            <img src="{% static 'home/imgs/honda.png' %}" alt="Thumbnail" class="card-thumbnail">
-
-            <p class="card-car-name">Honda</p>
-
-            <p class="card-category">CR-V (2006)</p>
-            <p class="card-attribute">2.2 I-CDTI SPORT</p>
-
-            <a href="#"><button class="card-btn btn">View Car</button></a>
-          </div>
-
-
+          {% endfor %}
         </div>
 
         <div class="pagination">
@@ -154,13 +134,15 @@
         <h2 class="s6-title">Testimonials</h2>
 
         <div class="card-group">
+          {% for testimonial in testimonials %}
           <div class="t-card">
-            <p class="card-quote">“Very friendly and helpful and answered any questions. I highly recommend them”</p>
+            <p class="card-quote">“{{ testimonial.message }}”</p>
 
             <h3 class="card-name">
-              - Chris Fildes
+              - {{ testimonial.name }}
             </h3>
           </div>
+          {% endfor %}
         </div>
         <a href=""><button class="s6-btn btn">Visit Our Fleet</button></a>
       </div>

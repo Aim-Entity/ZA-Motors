@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% block head %}
+  <title>Our Stock</title>
+  <link rel="stylesheet" href="{% static 'stock/stock.css' %}">
+  {% endblock %}
+</head>
+<body>
+  {% block content %}
+  <div class="container">
+    <div class="s1">
+      <h3 class="s1-sub-title">Meet Your New Car</h3>
+      <h2 class="s1-title">Honda Civic Type R</h2>
+
+      <div class="button-list">
+        <a href=""><button class="detail-btn">More Details</button></a>
+        <a href=""><button class="contact-btn">Contact Us</button></a>
+      </div>
+
+      <img src="{% static 'stock/imgs/hero_car.png' %}" alt="" class="hero-car">
+    </div>
+
+    <div class="s2">
+      <h2 class="s2-title">Which Vehicles Are You Looking For?</h2>
+
+      <div class="form-cont">
+        <form method="GET"> {% csrf_token %}
+          <div class="search-bar">
+            <!-- <input type="text" class="search" placeholder="Search A Car..."> -->
+            {{ filter.form }}
+          </div>
+          <button type="submit" class="search-btn"><img src="{% static 'stock/imgs/mag.svg' %}" alt="Mag" class="mag"><p class="search-text">Search</p></button>
+        </form>
+      </div>
+
+      <div class="categories">
+        
+      </div>
+    </div>
+
+    <div class="s3">
+      <div class="card-group">
+        {% for car in filter.qs %}
+        <div class="card">
+          <img src="{{ car.thumbnail.url }}" alt="Thumbnail" class="card-thumbnail">
+  
+          <div class="card-detail">
+            <p class="card-title">{{ car.brand }} {{ car.model }}</p>
+            <p class="card-attribute">{{ car.attribute }} ({{ car.year }})</p>
+            <p class="card-description">{{ car.thumbnail_description }}</p>
+    
+            <a href="{% url 'stock-detail' car.slug %}"><button class="card-btn btn">View Details</button></a>
+          </div>
+
+          <p class="card-price">£{{ car.price }}</p>
+        </div>
+        {% endfor %}
+      </div>
+      
+    </div>
+  </div>
+
+  <style>
+    .navigation{
+      opacity: 1;
+    }
+  </style>
+
+  <script>
+    document.querySelector("#id_name__icontains").placeholder = "Search A Car.."
+
+    let navigation = document.querySelector(".navigation")
+    navigation.style.opacity = 1
+  </script>
+  {% endblock %}
+</body>
+</html>

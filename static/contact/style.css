@@ -1,5 +1,5 @@
 .s1 {
-  margin-top: 100px;
+  margin-top: 200px;
 }
 
 .s1-title {
@@ -109,7 +109,7 @@ form input {
   height: 60px;
   margin-top: 40px;
 
-  background: #0b5c97;
+  background: #d43333;
   border-radius: 3px;
   border: none;
 
@@ -150,6 +150,10 @@ footer {
 }
 
 @media screen and (max-width: 960px) {
+  .s1 {
+    margin-top: 100px;
+  }
+
   .s1-container {
     display: flex;
     flex-direction: column;
@@ -204,5 +208,11 @@ footer {
 
   .contact-text {
     font-size: 21px;
+  }
+
+  .s1-left-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

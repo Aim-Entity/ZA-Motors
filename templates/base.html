@@ -14,7 +14,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="base-container">
@@ -24,7 +24,7 @@
 
         <ul>
           <a href="{% url 'index' %}"><li class="home">Home</li></a>
-          <a href="#"><li class="fleet">Stocklist</li></a>
+          <a href="{% url 'stock' %}"><li class="fleet">Stocklist</li></a>
           <a href="{% url 'contact' %}"><li class="contact">Contact</li></a>
         </ul>
       </div>
@@ -32,7 +32,7 @@
       <div class="nav-dropdown">
         <div>
           <a href="{% url 'index' %}"><li class="home">Home</li></a>
-          <a href="#"><li class="fleet">Stocklist</li></a>
+          <a href="{% url 'stock' %}"><li class="fleet">Stocklist</li></a>
           <a href="{% url 'contact' %}"><li class="contact">Contact</li></a>
         </div>
       </div>
@@ -56,7 +56,7 @@
   <div class="base-container">
     <footer>
       <div class="left-footer">
-        <h3 class="copy">© Chauffline, all rights reserved</h3>
+        <h3 class="copy">© ZA Motors, all rights reserved</h3>
 
         <div class="credits">
           <h3 class="designer">Designed & Developed By Bilal Uddin. Visit www.bilaluddin.me</h3>
@@ -65,13 +65,13 @@
 
       <div class="right-footer">
         <h3 class="email">Copyright: ZA Motors 2021</h3>
-        <h3 class="email">Address</h3>
+        <h3 class="email">Address: Bank Hall Works off, Colne Rd, Burnley BB10 3AT</h3>
         <h3 class="phone-footer">Phone: 07967 509040</h3>
 
         <div class="socials">
-          <a href="https://www.facebook.com/chauffline" target="_blank"><img src="{% static 'base_imgs/facebook.svg' %}" alt="FB" class="facebook"></a>
-          <a href="https://twitter.com/iCHAUFFLINE" target="_blank"><img src="{% static 'base_imgs/twitter.svg' %}" alt="twitter" class="twitter"></a>
-          <a href="https://www.instagram.com/chauffline/" target="_blank"><img src="{% static 'base_imgs/instagram.svg' %}" alt="instagram" class="instagram"></a>
+          <a href="" target="_blank"><img src="{% static 'base_imgs/facebook.svg' %}" alt="FB" class="facebook"></a>
+          <a href="" target="_blank"><img src="{% static 'base_imgs/twitter.svg' %}" alt="twitter" class="twitter"></a>
+          <a href="" target="_blank"><img src="{% static 'base_imgs/instagram.svg' %}" alt="instagram" class="instagram"></a>
         </div>
       </div>
     </footer>
