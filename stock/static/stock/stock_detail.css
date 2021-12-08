@@ -165,7 +165,8 @@
 
 .s3-cont {
   width: 95%;
-  height: 411px;
+  height: auto;
+  padding-bottom: 100px;
   margin: 0 auto;
 
   background: #ffffff;
@@ -193,7 +194,7 @@
 }
 
 .description {
-  width: 993px;
+  width: 80%;
   padding-top: 50px;
   margin-left: 20px;
 
@@ -266,4 +267,94 @@
 
 .active-cont {
   display: block;
+}
+
+@media screen and (max-width: 950px) {
+  .s1 {
+    margin-top: 60px;
+  }
+
+  .s1-title {
+    font-size: 24px;
+  }
+
+  .s1-price {
+    font-size: 24px;
+  }
+
+  .cover {
+    width: 334px;
+    height: 186px;
+  }
+
+  .gallery {
+    flex-direction: column;
+  }
+
+  .cover-options {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-top: 50px;
+  }
+
+  .main-title {
+    justify-content: space-between;
+  }
+
+  .s1-price {
+    margin: 0;
+  }
+
+  .top-text {
+    width: 80%;
+  }
+
+  .s1-attribute {
+    font-size: 21px;
+    text-align: center;
+  }
+
+  .contact-btn {
+    margin-left: 0;
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .facts {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .s2-cont {
+    height: auto;
+    padding-bottom: 50px;
+  }
+
+  .description {
+    width: 85%;
+    font-size: 18px;
+  }
+
+  .s3-cont {
+    height: auto;
+    padding-bottom: 50px;
+  }
+
+  .detail-tab {
+    display: none;
+  }
+
+  .s1-attribute {
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 1210px) {
+  .cover-option {
+    width: 120px;
+    height: 120px;
+  }
 }

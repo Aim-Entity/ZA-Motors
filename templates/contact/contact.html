@@ -26,33 +26,51 @@
 
           <div class="s1-left">
             <div class="s1-left-top">
-              <h2 class="s1-title">Send Us A Message</h2>
-
-              <p class="s1-text">
-                Fill in our form or give us a call 
-                for any enquiries. 
-              </p>
-
               <div class="opening-times">
-                <p class="time">Monday 9am - 6pm</p>
-                <p class="time">Tuesday 9am - 6pm</p>
-                <p class="time">Wednesday 9am - 6pm</p>
-                <p class="time">Thursday 9am - 6pm</p>
-                <p class="time">Friday 9:30am - 6:30pm</p>
-                <p class="time">Saturday 9am - 7:30pm</p>
-                <p class="time">Sunday 9am - 6pm</p>
+                <h2 class="time-title">Opening Times</h2>
+                <div class="time-cont">
+                  <p class="day">Monday</p>
+                  <p class="time">9AM - 6PM</p>
+                </div>
+
+                <div class="time-cont">
+                  <p class="day">Tuesday</p>
+                  <p class="time">9AM - 6PM</p>
+                </div>
+
+                <div class="time-cont">
+                  <p class="day">Wednesday</p>
+                  <p class="time">9AM - 6PM</p>
+                </div>
+
+                <div class="time-cont">
+                  <p class="day">Thursday</p>
+                  <p class="time">9AM - 6PM</p>
+                </div>
+
+                <div class="time-cont">
+                  <p class="day">Friday</p>
+                  <p class="time">9:30AM - 6:30PM</p>
+                </div>
+
+                <div class="time-cont">
+                  <p class="day">Saturday</p>
+                  <p class="time">9AM - 7:30PM</p>
+                </div>
+
+                <div class="time-cont">
+                  <p class="day">Sunday</p>
+                  <p class="time">9AM - 6PM</p>
+                </div>
+
               </div>
-
-              <p class="address">Bank Hall Works off, Colne Rd, Burnley BB10 3AT</p>
-            </div>
-
-            <div class="s1-left-bottom">
-              <!-- <div id="map"></div> -->
-
-              <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9426.142756558445!2d-2.2340895!3d53.797751!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa98030f1bf831bde!2sZ%26A%20Motors!5e0!3m2!1sen!2suk!4v1638704787430!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
           </div>
+
+          
         </div>
+
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9426.142756558445!2d-2.2340895!3d53.797751!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa98030f1bf831bde!2sZ%26A%20Motors!5e0!3m2!1sen!2suk!4v1638704787430!5m2!1sen!2suk" width="980" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </div>
     </div>
 
@@ -64,7 +82,7 @@
 
       console.log(window.innerWidth)
 
-      if(window.innerWidth < 900) {
+      if(window.innerWidth < 1000) {
         map.height = "225"
         map.width = "300"
       }

@@ -188,7 +188,7 @@
 }
 
 .s3-content {
-  width: 1080px;
+  width: 85%;
   height: 294px;
   margin: 0 auto;
 
@@ -210,12 +210,12 @@
 }
 
 .s3-par {
-  width: 1024px;
+  width: 95%;
   margin: 0 auto;
   margin-top: 45px;
 
   font-size: 24px;
-  line-height: 29px;
+  line-height: 40px;
   text-align: center;
 
   color: #ffffff;

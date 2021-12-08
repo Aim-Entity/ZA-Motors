@@ -170,7 +170,7 @@ form button {
 .card-group {
   width: 88.125%;
   margin: 0 auto;
-  margin-top: 70px;
+  margin-top: 0px;
 
   display: flex;
   flex-direction: column;

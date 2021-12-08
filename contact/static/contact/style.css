@@ -54,20 +54,12 @@
 .s1-right {
   width: 430px;
   height: 704px;
-
-  background: #ffffff;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 2px;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  width: 82%;
-
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%;
 }
 
 form label {
@@ -96,7 +88,7 @@ form input {
   margin-top: 15px;
 
   height: 130px;
-  max-width: 352px;
+  max-width: 430px;
   max-height: 169px;
   padding-left: 20px;
   padding-top: 20px;
@@ -126,19 +118,58 @@ form input {
   grid-template-rows: 1fr;
 
   /* justify-items: center; */
+  justify-items: baseline;
 }
 
 .s1-right {
-  grid-column: 2 / span 1;
+  grid-column: 0 / span 1;
   justify-self: right;
-  margin-right: 40px;
+  margin-right: 140px;
+}
+
+.opening-times {
+  width: 393px;
+  height: 704px;
+
+  background: #333333;
+  border-radius: 2px;
+}
+
+.time,
+.day {
+  font-size: 21px;
+  line-height: 29px;
+
+  color: #ffffff;
+}
+
+.time-title {
+  width: 100%;
+  text-align: center;
+  padding-top: 30px;
+  margin-bottom: 60px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 34px;
+
+  color: #ffffff;
+}
+
+.time-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 30px;
 }
 
 .s1-left {
-  grid-column: 1 / span 1;
+  grid-column: 2 / span 1;
   grid-row: 1 / span 1;
 
-  margin-left: 40px;
+  margin-left: 200px;
 }
 
 .s1-left-bottom {
@@ -149,18 +180,15 @@ footer {
   margin-top: 210px;
 }
 
-.time {
-  font-size: 18px;
-  margin-top: 20px;
-}
-
-.address {
-  font-size: 18px;
-  margin-top: 50px;
-}
-
 .s1-left-bottom {
   margin-top: 15px;
+}
+
+.map {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 100px;
 }
 
 @media screen and (max-width: 960px) {
