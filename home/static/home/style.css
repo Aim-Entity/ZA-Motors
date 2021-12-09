@@ -62,12 +62,22 @@
 .hero-img {
   position: absolute;
   left: 0px;
-  top: 0px;
+  top: 100px;
   z-index: -1;
 
   width: 100%;
-  height: 100vh;
+  height: 85vh;
   object-fit: cover;
+}
+
+.hero2 {
+  z-index: -2;
+  opacity: 0;
+}
+
+.hero3 {
+  z-index: -3;
+  opacity: 0;
 }
 /* SECTION 2 */
 
@@ -140,7 +150,7 @@
   /* identical to box height */
 
   color: #ffffff;
-  margin-top: 30px;
+  margin-top: 68px;
   cursor: pointer;
 }
 

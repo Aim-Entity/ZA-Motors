@@ -22,7 +22,7 @@ def contact(request):
                 'Za Motors - Contact Us',
                 body,
                 settings.EMAIL_HOST_USER,
-                ['bilaluddin474@gmail.com'],
+                ['zamotors14@gmail.com'],
             )
 
             email.fail_silently = False

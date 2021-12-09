@@ -15,7 +15,9 @@
   {% block content %}
     <div class="container">
       <div class="s1">
-        <img src="{% static 'home/imgs/hero.png' %}" alt="Hero" class="hero-img">
+        <img src="{% static 'home/imgs/hero.png' %}" alt="Hero" class="hero-img hero1">
+        <img src="{% static 'home/imgs/hero2.png' %}" alt="Hero" class="hero-img hero2">
+        <img src="{% static 'home/imgs/hero3.png' %}" alt="Hero" class="hero-img hero3">
 
         <div class="s1-clear-bg">
           <h2 class="s1-title">PURCHASE YOUR PERFECT CAR</h2>
@@ -34,9 +36,9 @@
           <div class="card">
             <img src="{{ car.car.thumbnail.url }}" alt="Thumbnail" class="card-thumbnail">
 
-            <p class="card-car-name">{{ car.car.brand }}</p>
+            <p class="card-car-name"><b style="text-decoration: underline;" >£{{ car.car.price }}</b> | {{ car.car.brand }} {{ car.car.model }}</p>
 
-            <p class="card-category">{{ car.car.model }}</p>
+            <!-- <p class="card-category"></p> -->
             {% if car.car.attribute %}
             <p class="card-attribute">{{ car.car.attribute }}</p>
             {% endif %}
@@ -61,7 +63,7 @@
 
         <div class="s3-content">
 
-          <p class="s3-par1 s3-par">For fantastic offers and great choice, Z.A Motor's is your number 1 used car dealer. </p>
+          <p class="s3-par1 s3-par">For fantastic offers and great choice, Z&A Motor's is your number 1 used car dealer. </p>
 
           <p class="s3-par2 s3-par">Based in Burnley, Lancashire but serving customers across the UK. 
             We pride ourselves on offering fantastic range of cars</p>
@@ -170,6 +172,9 @@
         align-items: center;
       } */
     </style>
+
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <script src="{% static 'home/app.js' %}"></script>
   {% endblock %}
 </body>
 </html>
