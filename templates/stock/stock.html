@@ -9,6 +9,10 @@
   {% block head %}
   <title>Our Stock</title>
   <link rel="stylesheet" href="{% static 'stock/stock.css' %}">
+
+  <meta name="description" content="Check out our range of quality cars from well known brands">
+  <meta name="keywords" content="cars, quality, car brands, burnley">
+  <meta name="author" content="Bilal Uddin">
   {% endblock %}
 </head>
 <body>
@@ -31,11 +35,25 @@
 
       <div class="form-cont">
         <form method="GET"> {% csrf_token %}
-          <div class="search-bar">
-            <!-- <input type="text" class="search" placeholder="Search A Car..."> -->
-            {{ filter.form }}
+          <!-- <div class="search-top"> -->
+            <div class="search-bar">
+              <!-- <input type="text" class="search" placeholder="Search A Car..."> -->
+              {{ filter.form }}
+            </div>
+            <button type="submit" class="search-btn"><img src="{% static 'stock/imgs/mag.svg' %}" alt="Mag" class="mag"><p class="search-text">Search</p></button>
+          <!-- </div> -->
+
+          <div class="price-range">
+            <div class="min">
+              <label class="min-title">Min Price</label>
+              <input type="number" class="min-input" name="min-price">
+            </div>
+
+            <div class="max">
+              <label class="max-title">Max Price</label>
+              <input type="number" class="max-input" name="max-price">
+            </div>
           </div>
-          <button type="submit" class="search-btn"><img src="{% static 'stock/imgs/mag.svg' %}" alt="Mag" class="mag"><p class="search-text">Search</p></button>
         </form>
       </div>
 
@@ -51,9 +69,9 @@
           <img src="{{ car.thumbnail.url }}" alt="Thumbnail" class="card-thumbnail">
   
           <div class="card-detail">
-            <p class="card-title">{{ car.brand }} {{ car.model }}</p>
-            <p class="card-attribute">{{ car.attribute }} ({{ car.year }})</p>
-            <p class="card-description">{{ car.thumbnail_description }}</p>
+            <p class="card-title">{{ car.brand|title }} {{ car.model|title }}</p>
+            <p class="card-attribute">{{ car.attribute|title }} ({{ car.year_of_car }})</p>
+            <p class="card-description">{{ car.thumbnail_description|title }}</p>
     
             <a href="{% url 'stock-detail' car.slug %}"><button class="card-btn btn">View Details</button></a>
           </div>

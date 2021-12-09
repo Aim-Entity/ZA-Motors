@@ -109,16 +109,57 @@
 
 form {
   width: 810px;
-  height: 110px;
-  margin: 0 auto;
-  margin-top: 60px;
+  /* height: 200px; */
+  height: 100px;
+
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin: 0 auto;
+  margin-top: 60px;
 
   background: #fcfcfc;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 8px;
+}
+
+.search-top {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  padding-top: 20px;
+}
+
+.min-title,
+.min-input,
+.max-title,
+.max-price {
+  display: block;
+}
+
+.min-title,
+.max-title {
+  font-size: 24px;
+}
+
+.min-input,
+.max-input {
+  border: none;
+  border-bottom: 2px #333 solid;
+  margin-top: 10px;
+  outline: none;
+  font-size: 18px;
+}
+
+.price-range {
+  display: flex;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 25px;
 }
 
 .search-btn {

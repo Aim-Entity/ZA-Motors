@@ -18,11 +18,11 @@
       <div class="s1">
         <div class="top-text">
           <div class="main-title">
-            <h2 class="s1-title">{{ object.brand }} {{ object.model }}</h2>
-            <h2 class="s1-price">£{{ object.price }}</h2>
+            <h2 class="s1-title">{{ object.brand|title }} {{ object.model|title }}</h2>
+            <h2 class="s1-price">£{{ object.price|title }}</h2>
           </div>
 
-          <h3 class="s1-attribute">{{ object.attribute }} ({{ object.year_of_car }})</h3>
+          <h3 class="s1-attribute">{{ object.attribute|title }} ({{ object.year_of_car }})</h3>
         </div>
         <div class="gallery">
           <img src="{{ object.img1.url }}" alt="Cover" class="cover active-cover">
@@ -77,32 +77,32 @@
           <div class="facts">
             <div class="fact">
               <img src="{% static 'stock/imgs/car.svg' %}" alt="Car" class="fact-img">
-              <p class="fact-text">{{ object.car_type }}</p>
+              <p class="fact-text">{{ object.car_type|title }}</p>
             </div>
 
             <div class="fact">
               <img src="{% static 'stock/imgs/gear.svg' %}" alt="Gear" class="fact-img">
-              <p class="fact-text">{{ object.gear_type }}</p>
+              <p class="fact-text">{{ object.gear_type|title }}</p>
             </div>
 
             <div class="fact">
               <img src="{% static 'stock/imgs/color.svg' %}" alt="Colour" class="fact-img">
-              <p class="fact-text">{{ object.colour }}</p>
+              <p class="fact-text">{{ object.colour|title }}</p>
             </div>
 
             <div class="fact">
               <img src="{% static 'stock/imgs/petrol.svg' %}" alt="Petrol" class="fact-img">
-              <p class="fact-text">{{ object.petrol_type }}</p>
+              <p class="fact-text">{{ object.petrol_type|title }}</p>
             </div>
 
             <div class="fact">
               <img src="{% static 'stock/imgs/mile.svg' %}" alt="mile" class="fact-img">
-              <p class="fact-text">{{ object.mileage }}</p>
+              <p class="fact-text">{{ object.mileage|title }}</p>
             </div>
 
             <div class="fact">
               <img src="{% static 'stock/imgs/year.svg' %}" alt="year" class="fact-img">
-              <p class="fact-text">{{ object.year_of_car }}</p>
+              <p class="fact-text">{{ object.year_of_car|title }}</p>
             </div>
           </div>
         </div>
@@ -114,7 +114,7 @@
 
         <div class="s3-cont">
           <div class="description-cont active-cont">
-            <p class="description">{{ object.description }}</p>
+            <p class="description">{{ object.description|title }}</p>
           </div>
 
           <div class="detail-cont">
@@ -123,7 +123,7 @@
                 <div class="detail-section">
                   <div class="detail-text">
                     <p class="attribute">Model Series</p>
-                    <p class="attribute-answer">{{ object.model_series }}</p>
+                    <p class="attribute-answer">{{ object.model_series|title }}</p>
                   </div>
                   <hr class="attribute-line">
                 </div>
@@ -131,7 +131,7 @@
                 <div class="detail-section">
                   <div class="detail-text">
                     <p class="attribute">Gross Weight KG</p>
-                    <p class="attribute-answer">{{ object.gross_weight_kg }}</p>
+                    <p class="attribute-answer">{{ object.gross_weight_kg|title }}</p>
                   </div>
                   <hr class="attribute-line">
                 </div>
@@ -139,7 +139,7 @@
                 <div class="detail-section">
                   <div class="detail-text">
                     <p class="attribute">Acceleration (0-60 MPH)</p>
-                    <p class="attribute-answer">{{ object.acceleration_zeroToSixty }}</p>
+                    <p class="attribute-answer">{{ object.acceleration_zeroToSixty|title }}</p>
                   </div>
                   <hr class="attribute-line">
                 </div>
@@ -147,7 +147,7 @@
                 <div class="detail-section">
                   <div class="detail-text">
                     <p class="attribute">Fuel Consumption MPG</p>
-                    <p class="attribute-answer">{{ object.fuel_consumption_MPG }}</p>
+                    <p class="attribute-answer">{{ object.fuel_consumption_MPG|title }}</p>
                   </div>
                   <hr class="attribute-line">
                 </div>
@@ -155,7 +155,7 @@
                 <div class="detail-section">
                   <div class="detail-text">
                     <p class="attribute">Foward Gears</p>
-                    <p class="attribute-answer">{{ object.foward_gears }}</p>
+                    <p class="attribute-answer">{{ object.foward_gears|title }}</p>
                   </div>
                   <hr class="attribute-line">
                 </div>
@@ -165,7 +165,7 @@
                 <div class="detail-section">
                   <div class="detail-text">
                     <p class="attribute">Max Power BHP</p>
-                    <p class="attribute-answer">{{ object.max_power_BHP }}</p>
+                    <p class="attribute-answer">{{ object.max_power_BHP|title }}</p>
                   </div>
                   <hr class="attribute-line">
                 </div>
@@ -173,7 +173,7 @@
                 <div class="detail-section">
                   <div class="detail-text">
                     <p class="attribute">Max Speed MPH</p>
-                    <p class="attribute-answer">{{ object.max_speed_MPH }}</p>
+                    <p class="attribute-answer">{{ object.max_speed_MPH|title }}</p>
                   </div>
                   <hr class="attribute-line">
                 </div>
@@ -181,7 +181,7 @@
                 <div class="detail-section">
                   <div class="detail-text">
                     <p class="attribute">Number Of Cylinders</p>
-                    <p class="attribute-answer">{{ object.number_of_cylinders }}</p>
+                    <p class="attribute-answer">{{ object.number_of_cylinders|title }}</p>
                   </div>
                   <hr class="attribute-line">
                 </div>
@@ -189,7 +189,7 @@
                 <div class="detail-section">
                   <div class="detail-text">
                     <p class="attribute">Length (M)</p>
-                    <p class="attribute-answer">{{ object.length_metres }}</p>
+                    <p class="attribute-answer">{{ object.length_metres|title }}</p>
                   </div>
                   <hr class="attribute-line">
                 </div>
@@ -197,7 +197,7 @@
                 <div class="detail-section">
                   <div class="detail-text">
                     <p class="attribute">Height (M)</p>
-                    <p class="attribute-answer">{{ object.height_metres }}</p>
+                    <p class="attribute-answer">{{ object.height_metres|title }}</p>
                   </div>
                   <hr class="attribute-line">
                 </div>

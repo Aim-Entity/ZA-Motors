@@ -9,6 +9,10 @@
   {% block head %}
   <title>Home</title>
   <link rel="stylesheet" href="{% static 'home/style.css' %}">
+
+  <meta name="description" content="We are Z&A Motors based in Burnley and here to offer affordable quality used cars. ">
+  <meta name="keywords" content="used cars, affordable cars, burnley, car dealership">
+  <meta name="author" content="Bilal Uddin">
   {% endblock %}
 </head>
 <body>
@@ -36,11 +40,11 @@
           <div class="card">
             <img src="{{ car.car.thumbnail.url }}" alt="Thumbnail" class="card-thumbnail">
 
-            <p class="card-car-name"><b style="text-decoration: underline;" >£{{ car.car.price }}</b> | {{ car.car.brand }} {{ car.car.model }}</p>
+            <p class="card-car-name"><b style="text-decoration: underline;" >£{{ car.car.price }}</b> | {{ car.car.brand|title }} {{ car.car.model|title }}</p>
 
             <!-- <p class="card-category"></p> -->
             {% if car.car.attribute %}
-            <p class="card-attribute">{{ car.car.attribute }}</p>
+            <p class="card-attribute">{{ car.car.attribute|title }}</p>
             {% endif %}
 
             <a href="{% url 'stock-detail' car.car.slug %}"><button class="card-btn btn">View Car</button></a>
@@ -138,10 +142,10 @@
         <div class="card-group">
           {% for testimonial in testimonials %}
           <div class="t-card">
-            <p class="card-quote">“{{ testimonial.message }}”</p>
+            <p class="card-quote">“{{ testimonial.message|title }}”</p>
 
             <h3 class="card-name">
-              - {{ testimonial.name }}
+              - {{ testimonial.name|title }}
             </h3>
           </div>
           {% endfor %}

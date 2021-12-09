@@ -6,5 +6,5 @@ class CarFilter(django_filters.FilterSet):
     class Meta:
         model = Car
         fields = {
-            "brand": ["icontains"]
+            "brand": ["icontains"],
         }

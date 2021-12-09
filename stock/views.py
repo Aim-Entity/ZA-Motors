@@ -6,6 +6,7 @@ from .filters import CarFilter
 
 class StockAllListView(ListView):
     template_name = "stock/stock.html"
+    # queryset = Car.objects.filter(price__range=(get(), 2500)
     queryset = Car.objects.all()
 
     # def get_queryset(self):
