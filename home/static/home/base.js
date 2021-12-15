@@ -47,6 +47,19 @@ function phoneNav() {
   })
 }
 
+function notificationLoad() {
+
+  let navTween = new TimelineLite()
+  let message = document.querySelector(".messages-notification");
+  window.addEventListener("DOMContentLoaded", e => {
+    navTween
+    .to(message, {duration: 1.5, y: 200, ease: "Power2.easeOut"})
+    .to(message, {duration: 4.5, ease: "Power2.easeOut"})
+    .to(message, {duration: 3.5, y: -200, ease: "Power2.easeOut"});
+  })
+}
+
+notificationLoad()
 phoneNav()
 // navigationShift()
 // navigationColor()

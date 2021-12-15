@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .forms import ContactForm
 from .models import Contact
+from django.contrib import messages
 from django.core.mail import EmailMessage
 from django.conf import settings
 
@@ -27,6 +28,11 @@ def contact(request):
 
             email.fail_silently = False
             email.send()
+
+            messages.success(
+                request, f'Thank you, {name} for sending a message!')
+
+            return redirect("contact")
 
     context = {
         "form": form

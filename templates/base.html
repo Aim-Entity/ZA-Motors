@@ -19,6 +19,11 @@
 <body>
   <div class="base-container">
     <nav>
+      {% if messages %} {% for message in messages %}
+      <div class="messages-notification">
+        <p class="message-text">{{ message }}</p>
+      </div>
+      {% endfor %} {% endif %}
       <div class="navigation">
         <img src="{% static 'base_imgs/logo.svg' %}" alt="Logo" class="logo">
 
@@ -43,8 +48,6 @@
         <img src="{% static 'base_imgs/hamburger.svg' %}" alt="Hamburger" class="hamburger">
       </div>
     </nav>
-
-
   </div>
 
   <script src="{% static 'home/base.js' %}"></script>
@@ -67,6 +70,7 @@
         <h3 class="email">Email: zamotors14@gmail.com</h3>
         <h3 class="address">Address: Bank Hall Works off, Colne Rd, Burnley BB10 3AT</h3>
         <h3 class="phone-footer">Phone: 07967 509040</h3>
+        <h3 class="phone-footer">Phone 2: 07517 368104</h3>
 
         <div class="socials">
           <a href="https://hi-in.facebook.com/Z-A-Motors-106253727857071/" target="_blank"><img src="{% static 'base_imgs/facebook.svg' %}" alt="FB" class="facebook"></a>
@@ -76,5 +80,8 @@
       </div>
     </footer>
   </div>
+
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+  <script src="{% static 'home/base.js' %}"></script>
 </body>
 </html>
